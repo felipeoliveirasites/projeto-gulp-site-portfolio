@@ -22,9 +22,18 @@
     "gulp-file-include": "^2.1.1",
     "gulp-imagemin": "^6.2.0",
     "gulp-purgecss": "^1.2.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-usemin": "^0.3.30"
-  }
+    "gulp-usemin": "^0.3.30",
+    "sass": "^1.90.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipeoliveirasites/projeto-gulp-site-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felipeoliveirasites/projeto-gulp-site-portfolio/issues"
+  },
+  "homepage": "https://github.com/felipeoliveirasites/projeto-gulp-site-portfolio#readme"
 }

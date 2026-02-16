@@ -9,14 +9,18 @@ const browsersync = require('browser-sync').create();
 const usemin = require('gulp-usemin');
 const purgecss = require('gulp-purgecss');
 const include = require('gulp-file-include')
+const _sass = require('gulp-sass')(require('sass'));
+
 
 function watchFiles(){
-    
+    gulp.watch('./src/scss/**/*.scss', sass)
+    gulp.watch('./src/**/*.html', html)
+    gulp.watch('./src/imagens/**/*', html)
 }
 
 function sass(){
     return gulp.src('./src/scss/**/*.scss')
-        .pipe(gulpsass())
+        .pipe(_sass())
         .pipe(gulp.dest('./src/css'))
 }
 
@@ -41,16 +45,13 @@ function imagens(){
 }
 
 function server(){
-    // browsersync.init({
-    //     server: './dist/'
-    // })
+    /*  browsersync.init({
+        server: './dist/'
+    }) */
 
     browsersync.init({
         server: {
             baseDir: './dist',
-            routes: {
-                '/node_modules': './node_modules'
-            }
         }
     })
 
